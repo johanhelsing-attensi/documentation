@@ -287,7 +287,7 @@ jobs:
 - **APPLE_TEAM_NAME**: Team Name from your [Apple Developer Account - Membership Details](https://developer.apple.com/account/#/membership/)
 - **MATCH_URL**: Address of private repository that you made in previous steps for storing certificates.
 - **GIT_TOKEN**: Base64 of `user:personal_access_token` e.g. `MyUserName:ghp_aksaSDKSasjkas8982jaaskalzoUIUsuqwer`.
-  You can use an online base64 encoder for this step or `echo -n MyUserName:ghp_aksaSDKSasjkas8982jaaskalzoUIUsuqwer | base64`. See [Fastlane's match documentation](https://docs.fastlane.tools/actions/match/#git-storage-on-github) for details.
+  You can use an online base64 encoder for this step or `echo -n MyUserName:ghp_aksaSDKSasjkas8982jaaskalzoUIUsuqwer | base64 -w 0`. See [Fastlane's match documentation](https://docs.fastlane.tools/actions/match/#git-storage-on-github) for details. Make sure there are no newlines in the string.
 - **MATCH_PASSWORD**: The password you set with `fastlane match appstore`
 - **APPSTORE_KEY_ID, APPSTORE_ISSUER_ID, APPSTORE_P8**: Because of limitations of using Apple accounts
   with 2FA (2-factor authentication) in CI environments, you have to
